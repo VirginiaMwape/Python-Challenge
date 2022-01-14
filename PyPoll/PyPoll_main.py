@@ -66,7 +66,8 @@ with open(output_file, "w", newline="") as datafile:
     print(f"--------------------")
     print(f"Winner: {winner}")
     print(f"--------------------")
-    datafile.write(f"--------------------\n")
-    datafile.write(f"Winner: {winner}\n")
-    datafile.write(f"--------------------")
+    # write an output file    
+    f.write(f"--------------------\n")
+    f.write(f"Winner: {winner}\n")
+    f.write(f"--------------------")
 
