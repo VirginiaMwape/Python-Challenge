@@ -1,7 +1,7 @@
 import os
 import csv
 
-#create placeholder list for the data
+#declare variables as empty lists
 months = []    
 greatestIncrease = 0
 p = []
@@ -10,10 +10,12 @@ total_months = 0
 net_change = []
 
 #read csv file
-csvpath = os.path.join('c:/Users/17438452/Desktop/PythonStuff/LearnPython/PyBank', 'budget_data.csv')
+csvpath = os.path.join('.', 'budget_data.csv')
 
-#Open scv file
+#Open and read csv file
 with open(csvpath, newline="") as csvfile:
+    
+    #read header and set it aside
     csvreader = csv.reader(csvfile, delimiter=",")
     reader = csv.reader(csvfile)
     next(reader, None)
