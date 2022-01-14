@@ -4,9 +4,9 @@ import os
 import csv
 
 #Read csv file
-csvpath = os.path.join('c:/Users/17438452/Desktop/PythonStuff/LearnPython/PyPoll', 'election_data.csv')
+csvpath = os.path.join('.', 'election_data.csv')
 
-#Variables
+# define Variables as empty lists
 total_votes = 0 
 candidate_list = []
 candidate_dict = {}
@@ -15,7 +15,7 @@ winner = ""
 
 #Opening csv file
 with open(csvpath, newline="") as csvfile:
-
+       #read header row
         csvreader = csv.reader(csvfile, delimiter=",")
         reader = csv.reader(csvfile)
         next(reader, None)
